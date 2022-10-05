@@ -1,3 +1,1 @@
-export default () => {
-  console.log('Hello, World!');
-};
+export default (a: number, b: number) => a + b;
