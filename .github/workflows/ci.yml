@@ -9,7 +9,7 @@ on:
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
-    name: Install dependencies
+    name: Run tests & Build
     strategy:
       matrix:
         node-version: [14.x, 16.x, 18.x]
