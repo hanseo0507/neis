@@ -12,5 +12,5 @@
     "baseUrl": ".",
     "outDir": "./lib"
   },
-  "exclude": ["./test/**/*.test.ts"]
+  "exclude": ["./test/**/*.test.ts", "lib"]
 }
