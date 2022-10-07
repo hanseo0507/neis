@@ -11,5 +11,6 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "outDir": "./lib"
-  }
+  },
+  "exclude": ["./test/**/*.test.ts"]
 }
