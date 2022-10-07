@@ -24,6 +24,17 @@
     ],
     "import/prefer-default-export": "off"
   },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    }
+  },
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
   }
