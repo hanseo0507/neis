@@ -1,10 +1,10 @@
-import { ConstructorParameters } from './interfaces';
+import { NeisConstructor } from './interfaces';
 
 export class Neis {
   public type: string;
   public key: string;
 
-  constructor({ type, key }: ConstructorParameters) {
+  constructor({ type, key }: NeisConstructor) {
     this.type = type;
     this.key = key;
   }

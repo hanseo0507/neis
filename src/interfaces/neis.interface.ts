@@ -1,6 +1,6 @@
 import { NeisAPIResponseType } from 'src/types';
 
-export interface ConstructorParameters {
+export interface NeisConstructor {
   type: NeisAPIResponseType;
   key: string;
 }
