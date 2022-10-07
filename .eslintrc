@@ -25,6 +25,6 @@
     "import/prefer-default-export": "off"
   },
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.eslint.json"
   }
 }
