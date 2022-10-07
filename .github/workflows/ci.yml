@@ -29,7 +29,7 @@ jobs:
         run: yarn build
 
       - name: Run tests with coverage
-        run: yarn test:coveralls
+        run: yarn test:coverage
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
