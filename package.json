@@ -11,13 +11,15 @@
     "format": "prettier \"src/**/*.ts\" --write",
     "lint": "eslint \"src/**/*.ts\" --fix",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "test:coveralls": "jest --coverage && coveralls < coverage/lcov.info"
   },
   "devDependencies": {
     "@types/jest": "^29.1.1",
     "@types/node": "^18.8.2",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
+    "coveralls": "^3.1.1",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
