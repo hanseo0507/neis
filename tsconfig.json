@@ -10,7 +10,10 @@
     "strict": true,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "paths": {
+      "@interfaces/*": ["./src/interfaces/*"]
+    }
   },
-  "exclude": ["./test/**/*.test.ts"]
+  "exclude": ["./test/**/*.test.ts", "lib"]
 }
