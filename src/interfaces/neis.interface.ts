@@ -1,4 +1,4 @@
-import { NeisAPIResponseType } from 'src/types';
+export type NeisAPIResponseType = 'json' | 'xml';
 
 export interface NeisConstructor {
   type: NeisAPIResponseType;

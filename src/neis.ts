@@ -1,4 +1,4 @@
-import { NeisConstructor } from './interfaces';
+import { NeisConstructor } from '@interfaces/neis.interface';
 
 export class Neis {
   public type: string;
