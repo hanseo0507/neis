@@ -1,6 +1,6 @@
 export type NeisAPIResponseType = 'json' | 'xml';
 
-export interface NeisConstructor {
+export interface NeisConfig {
   type: NeisAPIResponseType;
   key: string;
 }

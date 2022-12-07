@@ -1,10 +1,10 @@
-import { NeisConstructor } from '@interfaces/neis.interface';
+import { NeisConfig } from './types';
 
 export class Neis {
   public type: string;
   public key: string;
 
-  constructor({ type, key }: NeisConstructor) {
+  constructor({ type, key }: NeisConfig) {
     this.type = type;
     this.key = key;
   }
