@@ -55,4 +55,52 @@ describe('Define Neis() class', () => {
 
     expect(schoolInfo[0]).toStrictEqual(expectValue);
   });
+
+  test('.getClassInfo()', async () => {
+    const classInfo = await neis.getClassInfo({
+      ATPT_OFCDC_SC_CODE: 'B10',
+      SD_SCHUL_CODE: '7010911',
+      AY: '2022',
+      GRADE: '2',
+      DDDEP_NM: '해킹보안과',
+    });
+
+    const expectValues = [
+      {
+        ATPT_OFCDC_SC_CODE: 'B10',
+        ATPT_OFCDC_SC_NM: '서울특별시교육청',
+        SD_SCHUL_CODE: '7010911',
+        SCHUL_NM: '한세사이버보안고등학교',
+        AY: '2022',
+        GRADE: '2',
+        DGHT_CRSE_SC_NM: '주간',
+        SCHUL_CRSE_SC_NM: '고등학교',
+        ORD_SC_NM: '공업계',
+        DDDEP_NM: '해킹보안과',
+        CLASS_NM: '1',
+        LOAD_DTM: undefined,
+      },
+      {
+        ATPT_OFCDC_SC_CODE: 'B10',
+        ATPT_OFCDC_SC_NM: '서울특별시교육청',
+        SD_SCHUL_CODE: '7010911',
+        SCHUL_NM: '한세사이버보안고등학교',
+        AY: '2022',
+        GRADE: '2',
+        DGHT_CRSE_SC_NM: '주간',
+        SCHUL_CRSE_SC_NM: '고등학교',
+        ORD_SC_NM: '공업계',
+        DDDEP_NM: '해킹보안과',
+        CLASS_NM: '2',
+        LOAD_DTM: undefined,
+      },
+    ];
+
+    expect(
+      classInfo.map((info) => ({
+        ...info,
+        LOAD_DTM: undefined,
+      }))
+    ).toStrictEqual(expectValues);
+  });
 });

@@ -1,7 +1,13 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 
 import { isNeisAPIError, isNeisAPIErrorResponse, NeisAPIError } from './exceptions';
-import { NeisAPIResponse, NeisConfig, NeisSchoolInfoOptions, NeisServicesWithRow } from './types';
+import {
+  NeisConfig,
+  NeisAPIResponse,
+  NeisServicesWithRow,
+  NeisClassInfoOptions,
+  NeisSchoolInfoOptions,
+} from './types';
 
 export class Neis {
   public type: string;
@@ -48,5 +54,10 @@ export class Neis {
   public async getSchoolInfo(options?: NeisSchoolInfoOptions) {
     const { schoolInfo } = await this.request('schoolInfo', { params: options });
     return schoolInfo[1].row;
+  }
+
+  public async getClassInfo(options: NeisClassInfoOptions) {
+    const { classInfo } = await this.request('classInfo', { params: options });
+    return classInfo[1].row;
   }
 }
