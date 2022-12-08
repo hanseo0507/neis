@@ -29,6 +29,8 @@ jobs:
         run: yarn build
 
       - name: Run tests with coverage
+        env:
+          NEIS_API_KEY: ${{ secrets.NEIS_API_KEY }}
         run: yarn test:coverage
 
       - name: Coveralls
