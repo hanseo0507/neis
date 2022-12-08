@@ -1,4 +1,5 @@
-import { NeisSchoolInfo } from './schoolInfo';
+import { NeisClassInfo } from './neis/classInfo';
+import { NeisSchoolInfo } from './neis/schoolInfo';
 
 export type NeisAPIResponseType = 'json' | 'xml';
 
@@ -9,4 +10,5 @@ export interface NeisConfig {
 
 export interface NeisServicesWithRow {
   schoolInfo: NeisSchoolInfo;
+  classInfo: NeisClassInfo;
 }

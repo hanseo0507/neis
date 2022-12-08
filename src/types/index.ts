@@ -1,5 +1,6 @@
-export * from './utils';
-
 export * from './api';
 export * from './neis';
-export * from './schoolInfo';
+export * from './utils';
+
+export * from './neis/classInfo';
+export * from './neis/schoolInfo';
