@@ -4,6 +4,7 @@
   "plugins": ["prettier", "import"],
   "rules": {
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "class-methods-use-this": "off",
     "global-require": "off",
     "linebreak-style": "off",
     "no-return-await": "off",

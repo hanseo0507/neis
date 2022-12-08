@@ -15,10 +15,12 @@
     "test:coverage": "jest --coverage"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/jest": "^29.1.1",
     "@types/node": "^18.8.2",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "@typescript-eslint/parser": "^5.39.0",
+    "dotenv": "^16.0.3",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -38,5 +40,8 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "axios": "^1.2.0"
   }
 }
