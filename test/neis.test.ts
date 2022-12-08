@@ -1,4 +1,5 @@
 import { Neis } from '../src';
+import { NeisSchoolInfo, Optional } from '../src/types';
 
 describe('Check environment variables', () => {
   test('process.env.NEIS_API_KEY', () => {
@@ -18,7 +19,10 @@ describe('Define Neis() class', () => {
   });
 
   test('.getSchoolInfo()', async () => {
-    const schoolInfo = await neis.getSchoolInfo({ SCHUL_NM: '한세사이버보안고등학교' });
+    const schoolInfo = (await neis.getSchoolInfo({
+      SCHUL_NM: '한세사이버보안고등학교',
+    })) as Optional<NeisSchoolInfo, 'LOAD_DTM'>[];
+
     schoolInfo[0].LOAD_DTM = undefined;
 
     const expectValue = {
