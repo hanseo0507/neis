@@ -103,4 +103,27 @@ describe('Define Neis() class', () => {
       }))
     ).toStrictEqual(expectValues);
   });
+
+  test('.getSchoolMajorInfo()', async () => {
+    const schoolMajorInfo = await neis.getSchoolMajorInfo({
+      ATPT_OFCDC_SC_CODE: 'B10',
+      SD_SCHUL_CODE: '7010911',
+    });
+
+    expect(
+      schoolMajorInfo.map((info) => ({
+        ...info,
+        LOAD_DTM: undefined,
+      }))
+    ).toContainEqual({
+      ATPT_OFCDC_SC_CODE: 'B10',
+      ATPT_OFCDC_SC_NM: '서울특별시교육청',
+      SD_SCHUL_CODE: '7010911',
+      SCHUL_NM: '한세사이버보안고등학교',
+      DGHT_CRSE_SC_NM: '주간',
+      ORD_SC_NM: '공업계',
+      DDDEP_NM: '해킹보안과',
+      LOAD_DTM: undefined,
+    });
+  });
 });

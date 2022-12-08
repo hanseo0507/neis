@@ -4,3 +4,4 @@ export * from './utils';
 
 export * from './neis/classInfo';
 export * from './neis/schoolInfo';
+export * from './neis/schoolMajorInfo';
