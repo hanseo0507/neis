@@ -6,6 +6,7 @@ import {
   NeisAPIResponse,
   NeisServicesWithRow,
   NeisClassInfoOptions,
+  NeisSchoolAflcoInfoOptions,
   NeisSchoolInfoOptions,
   NeisSchoolMajorInfoOptions,
 } from './types';
@@ -65,5 +66,10 @@ export class Neis {
   public async getSchoolMajorInfo(options: NeisSchoolMajorInfoOptions) {
     const { schoolMajorinfo } = await this.request('schoolMajorinfo', { params: options });
     return schoolMajorinfo[1].row;
+  }
+
+  public async getSchoolAflcoInfo(options: NeisSchoolAflcoInfoOptions) {
+    const { schulAflcoinfo } = await this.request('schulAflcoinfo', { params: options });
+    return schulAflcoinfo[1].row;
   }
 }

@@ -1,4 +1,10 @@
-import { NeisClassInfo, NeisSchoolInfo, NeisSchoolMajorInfo, Optional } from 'src/types';
+import {
+  NeisClassInfo,
+  NeisSchoolAflcoInfo,
+  NeisSchoolInfo,
+  NeisSchoolMajorInfo,
+  Optional,
+} from 'src/types';
 
 export const classInfoMock: Optional<NeisClassInfo, 'LOAD_DTM'>[] = [
   {
@@ -26,6 +32,25 @@ export const classInfoMock: Optional<NeisClassInfo, 'LOAD_DTM'>[] = [
     ORD_SC_NM: '공업계',
     DDDEP_NM: '해킹보안과',
     CLASS_NM: '2',
+  },
+];
+
+export const schoolAflcoInfoMock: Optional<NeisSchoolAflcoInfo, 'LOAD_DTM'>[] = [
+  {
+    ATPT_OFCDC_SC_CODE: 'B10',
+    ATPT_OFCDC_SC_NM: '서울특별시교육청',
+    SD_SCHUL_CODE: '7010911',
+    SCHUL_NM: '한세사이버보안고등학교',
+    DGHT_CRSE_SC_NM: '야간',
+    ORD_SC_NM: '공업계',
+  },
+  {
+    ATPT_OFCDC_SC_CODE: 'B10',
+    ATPT_OFCDC_SC_NM: '서울특별시교육청',
+    SD_SCHUL_CODE: '7010911',
+    SCHUL_NM: '한세사이버보안고등학교',
+    DGHT_CRSE_SC_NM: '주간',
+    ORD_SC_NM: '공업계',
   },
 ];
 
