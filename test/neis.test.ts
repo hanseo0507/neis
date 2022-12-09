@@ -1,6 +1,11 @@
 import { Neis } from '../src';
 
-import { classInfoMock, schoolInfoMock, schoolMajorInfoMock } from './__mocks__/neis.mock';
+import {
+  classInfoMock,
+  schoolAflcoInfoMock,
+  schoolInfoMock,
+  schoolMajorInfoMock,
+} from './__mocks__/neis.mock';
 import { removeLoadDTM } from './helper/removeLoadDTM';
 
 describe('Check environment variables', () => {
@@ -30,6 +35,15 @@ describe('Define Neis() class', () => {
     });
 
     expect(removeLoadDTM(classInfo)).toStrictEqual(classInfoMock);
+  });
+
+  test('.getSchoolAflcoInfo()', async () => {
+    const schoolAflcoInfo = await neis.getSchoolAflcoInfo({
+      ATPT_OFCDC_SC_CODE: 'B10',
+      SD_SCHUL_CODE: '7010911',
+    });
+
+    expect(removeLoadDTM(schoolAflcoInfo)).toStrictEqual(schoolAflcoInfoMock);
   });
 
   test('.getSchoolInfo()', async () => {

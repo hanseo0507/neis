@@ -30,7 +30,10 @@
     "PURPS",
     "SEHF",
     "FOAS",
-    "MEMRD"
+    "MEMRD",
+    "Aflco",
+    "Aflcoinfo",
+    "Majorinfo"
   ],
   "flagWords": [],
   "ignorePaths": []
