@@ -58,4 +58,14 @@ describe('Define Neis() class', () => {
     });
     expect(removeLoadDTM(schoolMajorInfo)).toContainEqual(schoolMajorInfoMock);
   });
+
+  test('.getMealInfo()', async () => {
+    const mealInfo = await neis.getMealInfo({
+      ATPT_OFCDC_SC_CODE: 'B10',
+      SD_SCHUL_CODE: '7010911',
+      MLSV_YMD: '20221209',
+    });
+
+    expect(mealInfo).toStrictEqual(mealInfo);
+  });
 });
