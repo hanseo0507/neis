@@ -4,6 +4,7 @@
   "plugins": ["prettier", "import"],
   "rules": {
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "class-methods-use-this": "off",
     "global-require": "off",
     "linebreak-style": "off",
     "no-return-await": "off",
@@ -22,7 +23,20 @@
         }
       }
     ],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "lines-between-class-members": "off",
+    "@typescript-eslint/lines-between-class-members": "off"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.eslint.json"
+      }
+    }
   },
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
