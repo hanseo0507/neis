@@ -5,6 +5,7 @@
   "types": "lib/index.d.ts",
   "repository": "https://github.com/HanSeo0507/neis",
   "author": "HanSu Lee <i.hansu.lee@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "prepare": "husky install",
     "build": "tsc",
