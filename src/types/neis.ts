@@ -1,4 +1,5 @@
 import { NeisClassInfo } from './neis/classInfo';
+import { NeisMealInfo } from './neis/mealInfo';
 import { NeisSchoolAflcoInfo } from './neis/schoolAflcoInfo';
 import { NeisSchoolInfo } from './neis/schoolInfo';
 import { NeisSchoolMajorInfo } from './neis/schoolMajorInfo';
@@ -12,6 +13,7 @@ export interface NeisConfig {
 
 export interface NeisServicesWithRow {
   classInfo: NeisClassInfo;
+  mealServiceDietInfo: NeisMealInfo;
   schulAflcoinfo: NeisSchoolAflcoInfo;
   schoolInfo: NeisSchoolInfo;
   schoolMajorinfo: NeisSchoolMajorInfo;
