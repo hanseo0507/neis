@@ -1,6 +1,6 @@
 {
   "name": "@hanseo0507/neis",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": "https://github.com/HanSeo0507/neis",
