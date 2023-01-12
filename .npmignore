@@ -6,3 +6,7 @@ test/
 *.config.js
 tsconfig.json
 tsconfig.*.json
+
+**/*
+!lib/**
+!README.md
