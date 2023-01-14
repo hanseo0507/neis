@@ -1,0 +1,12 @@
+**/.*
+node_modules/
+coverage/
+src/
+test/
+*.config.js
+tsconfig.json
+tsconfig.*.json
+
+**/*
+!lib/**
+!README.md

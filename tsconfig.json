@@ -15,5 +15,5 @@
       "@interfaces/*": ["./src/interfaces/*"]
     }
   },
-  "exclude": ["./test/**/*.test.ts", "lib"]
+  "exclude": ["test", "lib"]
 }
