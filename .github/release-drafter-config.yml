@@ -1,0 +1,32 @@
+name-template: '🚀 v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+
+categories:
+  - title: '💡 Features'
+    label: 'feature'
+  - title: '🐛 Bug Fixes'
+    label: 'bug'
+  - title: '📦 Misc Changes'
+    label: 'documentation'
+
+change-template: '- $TITLE #$NUMBER @$AUTHOR'
+change-title-escapes: '\<*_&'
+
+version-resolvers:
+  major:
+    labels:
+      - 'major'
+  minor:
+    labels:
+      - 'minor'
+  patch:
+    labels:
+      - 'patch'
+  default: 'path'
+
+template: |
+  ## 🚀 이번 버전에서는 무엇이 바뀌었을까요?
+  ---
+  $CHANGES
+
+no-changes-template: '변경사항이 없어요.. 😐'
