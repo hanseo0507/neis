@@ -4,8 +4,9 @@ import {
   NeisSchoolAflcoInfo,
   NeisSchoolInfo,
   NeisSchoolMajorInfo,
+  NeisSchoolSchedule,
   Optional,
-} from 'src/types';
+} from '../../src/types';
 
 export const classInfoMock: Optional<NeisClassInfo, 'LOAD_DTM'>[] = [
   {
@@ -115,3 +116,25 @@ export const schoolMajorInfoMock: Optional<NeisSchoolMajorInfo, 'LOAD_DTM'> = {
   ORD_SC_NM: '공업계',
   DDDEP_NM: '해킹보안과',
 };
+
+export const schoolScheduleMock: Optional<NeisSchoolSchedule, 'LOAD_DTM'>[] = [
+  {
+    ATPT_OFCDC_SC_CODE: 'B10',
+    ATPT_OFCDC_SC_NM: '서울특별시교육청',
+    SD_SCHUL_CODE: '7010911',
+    SCHUL_NM: '한세사이버보안고등학교',
+    AY: '2022',
+    DGHT_CRSE_SC_NM: '주간',
+    SCHUL_CRSE_SC_NM: '고등학교',
+    SBTR_DD_SC_NM: '해당없음',
+    AA_YMD: '20230203',
+    EVENT_NM: '겨울개학식',
+    EVENT_CNTNT: null,
+    ONE_GRADE_EVENT_YN: 'Y',
+    TW_GRADE_EVENT_YN: 'Y',
+    THREE_GRADE_EVENT_YN: 'Y',
+    FR_GRADE_EVENT_YN: '*',
+    FIV_GRADE_EVENT_YN: '*',
+    SIX_GRADE_EVENT_YN: '*',
+  },
+];

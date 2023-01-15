@@ -2,9 +2,11 @@ import { Neis } from '../src';
 
 import {
   classInfoMock,
+  mealInfoMock,
   schoolAflcoInfoMock,
   schoolInfoMock,
   schoolMajorInfoMock,
+  schoolScheduleMock,
 } from './__mocks__/neis.mock';
 import { removeLoadDTM } from './helper/removeLoadDTM';
 
@@ -66,6 +68,16 @@ describe('Define Neis() class', () => {
       MLSV_YMD: '20221209',
     });
 
-    expect(mealInfo).toStrictEqual(mealInfo);
+    expect(mealInfo).toStrictEqual(mealInfoMock);
+  });
+
+  test('.getSchoolSchedule()', async () => {
+    const schoolSchedule = await neis.getSchoolSchedule({
+      ATPT_OFCDC_SC_CODE: 'B10',
+      SD_SCHUL_CODE: '7010911',
+      AA_YMD: '20230203',
+    });
+
+    expect(removeLoadDTM(schoolSchedule)).toStrictEqual(schoolScheduleMock);
   });
 });

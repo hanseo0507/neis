@@ -3,6 +3,7 @@ import { NeisMealInfo } from './neis/mealInfo';
 import { NeisSchoolAflcoInfo } from './neis/schoolAflcoInfo';
 import { NeisSchoolInfo } from './neis/schoolInfo';
 import { NeisSchoolMajorInfo } from './neis/schoolMajorInfo';
+import { NeisSchoolSchedule } from './neis/schoolSchedule';
 
 export type NeisAPIResponseType = 'json' | 'xml';
 
@@ -17,4 +18,5 @@ export interface NeisServicesWithRow {
   schulAflcoinfo: NeisSchoolAflcoInfo;
   schoolInfo: NeisSchoolInfo;
   schoolMajorinfo: NeisSchoolMajorInfo;
+  SchoolSchedule: NeisSchoolSchedule;
 }

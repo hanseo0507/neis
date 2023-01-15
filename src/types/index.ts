@@ -7,3 +7,4 @@ export * from './neis/mealInfo';
 export * from './neis/schoolAflcoInfo';
 export * from './neis/schoolInfo';
 export * from './neis/schoolMajorInfo';
+export * from './neis/schoolSchedule';
