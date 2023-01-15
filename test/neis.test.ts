@@ -2,6 +2,7 @@ import { Neis } from '../src';
 
 import {
   classInfoMock,
+  mealInfoMock,
   schoolAflcoInfoMock,
   schoolInfoMock,
   schoolMajorInfoMock,
@@ -67,7 +68,7 @@ describe('Define Neis() class', () => {
       MLSV_YMD: '20221209',
     });
 
-    expect(mealInfo).toStrictEqual(mealInfo);
+    expect(mealInfo).toStrictEqual(mealInfoMock);
   });
 
   test('.getSchoolSchedule()', async () => {
