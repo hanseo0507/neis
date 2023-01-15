@@ -10,6 +10,7 @@ import {
   NeisSchoolInfoOptions,
   NeisSchoolMajorInfoOptions,
   NeisMealInfoOptions,
+  NeisSchoolScheduleOptions,
 } from './types';
 
 export class Neis {
@@ -72,6 +73,11 @@ export class Neis {
   public async getSchoolAflcoInfo(options: NeisSchoolAflcoInfoOptions) {
     const { schulAflcoinfo } = await this.request('schulAflcoinfo', { params: options });
     return schulAflcoinfo[1].row;
+  }
+
+  public async getSchoolSchedule(options: NeisSchoolScheduleOptions) {
+    const { SchoolSchedule } = await this.request('SchoolSchedule', { params: options });
+    return SchoolSchedule[1].row;
   }
 
   public async getMealInfo(options: NeisMealInfoOptions) {

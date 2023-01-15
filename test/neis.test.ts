@@ -5,6 +5,7 @@ import {
   schoolAflcoInfoMock,
   schoolInfoMock,
   schoolMajorInfoMock,
+  schoolScheduleMock,
 } from './__mocks__/neis.mock';
 import { removeLoadDTM } from './helper/removeLoadDTM';
 
@@ -67,5 +68,15 @@ describe('Define Neis() class', () => {
     });
 
     expect(mealInfo).toStrictEqual(mealInfo);
+  });
+
+  test('.getSchoolSchedule()', async () => {
+    const schoolSchedule = await neis.getSchoolSchedule({
+      ATPT_OFCDC_SC_CODE: 'B10',
+      SD_SCHUL_CODE: '7010911',
+      AA_YMD: '20230203',
+    });
+
+    expect(removeLoadDTM(schoolSchedule)).toStrictEqual(schoolScheduleMock);
   });
 });
